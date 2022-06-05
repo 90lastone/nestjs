@@ -1,22 +1,13 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/nestjs/src",
+  "sourceRoot": "apps/api/src",
   "monorepo": true,
-  "root": "apps/nestjs",
+  "root": "apps/api",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/nestjs/tsconfig.app.json"
+    "tsConfigPath": "apps/api/tsconfig.app.json"
   },
   "projects": {
-    "nestjs": {
-      "type": "application",
-      "root": "apps/nestjs",
-      "entryFile": "main",
-      "sourceRoot": "apps/nestjs/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/nestjs/tsconfig.app.json"
-      }
-    },
     "api": {
       "type": "application",
       "root": "apps/api",
@@ -24,6 +15,15 @@
       "sourceRoot": "apps/api/src",
       "compilerOptions": {
         "tsConfigPath": "apps/api/tsconfig.app.json"
+      }
+    },
+    "admin": {
+      "type": "application",
+      "root": "apps/admin",
+      "entryFile": "main",
+      "sourceRoot": "apps/admin/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/admin/tsconfig.app.json"
       }
     },
     "cron": {
